@@ -1,0 +1,11 @@
+# Ignore Python virtual environment
+venv/
+
+# Ignore environment variable files
+.env
+
+# Ignore Terraform state and cache files
+terraform/terraform.tfstate
+terraform/terraform.tfstate.backup
+terraform/.terraform/
+terraform/.terraform.lock.hcl
