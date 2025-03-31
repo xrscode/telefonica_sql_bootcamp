@@ -9,3 +9,6 @@ https://learn.microsoft.com/en-us/sql/connect/odbc/download-odbc-driver-for-sql-
 https://chocolatey.org/install
 
 3.  Install Terraform with Chocolatey
+
+4. Set pythonpath:
+$env:PYTHONPATH = "$PWD"

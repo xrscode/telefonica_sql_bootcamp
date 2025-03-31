@@ -1,14 +1,7 @@
 import pyodbc
-import os
-from dotenv import load_dotenv
+from src.utility_functions import *
 import re
 
-load_dotenv()
-
-sql_server = os.getenv('server_name')
-sql_user = os.getenv('server_user')
-sql_password = os.getenv('server_password')
-connection_string = os.getenv('connection_string')
 
 def read_sql_script(path):
     """
@@ -40,7 +33,7 @@ instwnd = './src/instnwnd.sql'
 sql_script = read_sql_script(instwnd)
 
 # Query database with pydobc:
-def query_database(query, connection_string):
+def setup_database(query, connection_string):
     """
     
     """
@@ -53,19 +46,13 @@ def query_database(query, connection_string):
     print('Executing query: ', query)
     
     cursor.execute(query)
-
-    data = cursor.fetchall()
-
-    # Close the cursor and connection:
     cursor.close()
     conn.close()
+    return
     
-    return data
-
-
 
 parts = re.split(r"(?i)\bGO\b", sql_script)
 
 for part in parts:
-    query_database(part, connection_string)
+    setup_database(part, connection_string)
 
