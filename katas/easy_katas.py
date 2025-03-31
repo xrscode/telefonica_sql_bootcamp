@@ -1,8 +1,11 @@
 from src.utility_functions import query_database
 
 def kata_one():
-    # Show the cateogry_name and description 
-    # from the categories table sorted by cateogry_name.
+    """
+    Write a query that shows the CategoryName and Description
+    from the dbo.Categories table.  Sort by CateogryName."""
+    
+
     query = """
     SELECT CategoryName, Description
     FROM dbo.Categories
@@ -10,6 +13,8 @@ def kata_one():
     """
     data = query_database(query)
     return data
+
+
 
 
 def kata_two():
@@ -26,5 +31,6 @@ def kata_two():
     data = query_database(query)
     return data
 
-print(type(kata_one()))
+def kata_three():
+    
 

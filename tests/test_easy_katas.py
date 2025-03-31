@@ -3,9 +3,11 @@ from src.utility_functions import *
 from katas.solutions.solutions_easy_katas import *
 
 def test_kata_one():
-    assert kata_one() == d_one, f'Expected {kata_one()} but got {data}'
+    result = kata_one()
+    assert kata_one() == d_one, f'Expected {d_one} but got {result}'
 
 
 def test_kata_two():
-    assert kata_two() == d_two, f'Expected {kata_two()} but got {data}'
+    result = kata_two()
+    assert kata_two() == d_two, f'Expected {d_two} but got {result}'
 
