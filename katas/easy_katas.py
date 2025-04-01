@@ -3,8 +3,15 @@ from src.utility_functions import query_database
 """
 Connect to SSMS to examine the tables and data.
 The first kata has been completed for you. 
-Type the query and uncoment the corresponding test in the test file to see if
-it is working!
+Type the query and uncomment the corresponding test in the test file to test 
+your solution.
+
+Remember that you will need to run the; '.\deploy.ps1' command first!
+
+If the tests are not running due to 'module not found' errors, try setting the
+python path with this command entered into the terminal:
+
+$env:PYTHONPATH = "$PWD"
 """
 
 def kata_1():

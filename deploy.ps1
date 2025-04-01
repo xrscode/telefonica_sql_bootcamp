@@ -108,7 +108,14 @@ Set-Location ..
 
 Write-Host "Loading Database..." -ForegroundColor Cyan
 
-# Run python setup
-python .\src\setup_db.py
-
-Write-Host "Setup complete!" -ForegroundColor Green
+# Attempt to load database:
+try {
+    python .\src\setup_db.py
+    if ($LASTEXITCODE -eq 0) {
+        Write-Host "Setup complete!" -ForegroundColor Green
+    } else {
+        Write-Host "Error" -ForegroundColor Red
+    }
+} catch {
+    Write-Host "Error" -ForegroundColor Red
+}

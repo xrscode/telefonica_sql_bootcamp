@@ -2,7 +2,8 @@ import pyodbc
 import os
 from dotenv import load_dotenv
 
-load_dotenv()
+# Ensure override set to true to refresh latest .env variables.
+load_dotenv(override=True)
 
 sql_server = os.getenv('server_name')
 sql_user = os.getenv('server_user')

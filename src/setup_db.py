@@ -3,6 +3,8 @@ from src.utility_functions import *
 import re
 
 
+print('Connection string: ', connection_string)
+
 def read_sql_script(path):
     """
     Args: 
