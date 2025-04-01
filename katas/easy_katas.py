@@ -25,6 +25,7 @@ def kata_1():
 
 
 
+
 def kata_2():
     """
     From the customers table; show the ConcatctName, Address, City Which are 
@@ -50,7 +51,7 @@ def kata_3():
 
     # Write query here:
     query = """
-    
+      
     """
     result = query_database(query)
     return result
@@ -82,7 +83,7 @@ def kata_5():
 
     # Write query here:
     query = """
-    
+     
     """
     result = query_database(query)
     return result
@@ -150,7 +151,7 @@ def kata_9():
 
     # Write query here:
     query = """
-    
+
     """
     result = query_database(query)
     return result
