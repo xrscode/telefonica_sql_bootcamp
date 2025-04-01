@@ -6,7 +6,7 @@ The first kata has been completed for you.
 Type the query and uncomment the corresponding test in the test file to test 
 your solution.
 
-Remember that you will need to run the; '.\deploy.ps1' command first!
+Remember that you will need to deploy the project first!
 
 If the tests are not running due to 'module not found' errors, try setting the
 python path with this command entered into the terminal:
@@ -17,7 +17,7 @@ $env:PYTHONPATH = "$PWD"
 def kata_1():
     """
     Write a query that shows the CategoryName and Description
-    from the dbo.Categories table.  Sort by CateogryName."""
+    from the Categories table.  Sort by CateogryName."""
     
 
     query = """
