@@ -37,16 +37,15 @@ data external account_info {
 # Create random string for SQL server password:
 resource "random_string" "random" {
   length           = 16
-  special          = true
-  override_special = "/@£$"
+  special          = false
 }
 
 # Create random string for SQL server password:
 resource "random_string" "random_two" {
   length           = 5
   special          = false
-  lower =           true
-  upper = false
+  lower            = true
+  upper            = false
 }
 
 resource "azurerm_mssql_server" "sql_bootcamp_server" {
