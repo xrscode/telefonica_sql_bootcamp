@@ -81,34 +81,34 @@ if (Test-Path $requirementsFile) {
 # Add the az login command to authenticate to Azure, use Telefonica tenant_id:
 az login --tenant 6771b25a-f4d8-4f9f-9fcc-e7468a5cdc46
 
-# # Define Terraform directory
-# $terraformDir = ".\terraform"
+# Define Terraform directory
+$terraformDir = ".\terraform"
 
-# # Run Terraform deployment
-# if (Test-Path $terraformDir) {
-#     Write-Host "Navigating to Terraform directory..." -ForegroundColor Cyan
-#     Set-Location $terraformDir
+# Run Terraform deployment
+if (Test-Path $terraformDir) {
+    Write-Host "Navigating to Terraform directory..." -ForegroundColor Cyan
+    Set-Location $terraformDir
 
-#     Write-Host "Initializing Terraform..." -ForegroundColor Yellow
-#     terraform init
+    Write-Host "Initializing Terraform..." -ForegroundColor Yellow
+    terraform init
 
-#     Write-Host "Planning Terraform deployment..." -ForegroundColor Yellow
-#     terraform plan
+    Write-Host "Planning Terraform deployment..." -ForegroundColor Yellow
+    terraform plan
 
-#     Write-Host "Applying Terraform deployment..." -ForegroundColor Yellow
-#     terraform apply -auto-approve
+    Write-Host "Applying Terraform deployment..." -ForegroundColor Yellow
+    terraform apply -auto-approve
 
-#     Write-Host "🚀 Deployment complete! 🚀" -ForegroundColor Green
-# } else {
-#     Write-Host "Terraform directory not found. Please ensure './terraform' exists." -ForegroundColor Red
-# }
+    Write-Host "🚀 Deployment complete! 🚀" -ForegroundColor Green
+} else {
+    Write-Host "Terraform directory not found. Please ensure './terraform' exists." -ForegroundColor Red
+}
 
-# Write-Host "Navigating out of the 'terraform' directory..." -ForegroundColor Cyan
-# Set-Location ..
+Write-Host "Navigating out of the 'terraform' directory..." -ForegroundColor Cyan
+Set-Location ..
 
 Write-Host "Loading Database..." -ForegroundColor Cyan
 
-# Define Terraform directory
+# Run python setup
 python .\src\setup_db.py
 
 Write-Host "Setup complete!" -ForegroundColor Green
